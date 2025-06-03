@@ -1,0 +1,46 @@
+
+:root{
+    --primary-color:#007bff;
+}
+
+
+/* search css */
+.search-container {padding: 20px;margin: 0 auto;transition: fixed 1s all;transition: all 0.3s ease; box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;}
+.search-container.scrolled{position: fixed;top: 0;width: 100%;z-index: 99;background: #fff;margin: 0 !important;padding: 19px 13px;max-width: none;left: 0;}
+.search-input-group {transition: all 0.3s ease;border-radius: 25px;overflow: hidden;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+.search-input-group.focused {box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);transform: scale(1.02);}
+.search-icon {background-color: #f8f9fa;border: none;color: #6c757d;display: flex;align-items: center;padding: 0 15px;}
+.search-input {border: none ;padding: 12px 20px;font-size: 1rem;background-color: #f8f9fa ;}
+.search-input:focus {box-shadow: none ;background-color: #fff ;}
+.search-button {border-radius: 0 25px 25px 0;padding: 10px 20px;font-weight: 500;background-color: var(--primary-color);border: none;transition: background-color 0.3s ease;}
+.search-button:hover {background-color: #0056b3;}
+.search-button:disabled {background-color: #6c757d;cursor: not-allowed;}
+/* search css end */
+
+
+/* pagination */
+.pagination-container {max-width: 800px;margin: 0 auto;padding: 10px;}
+.pagination {display: flex;gap: 5px;flex-wrap: wrap;}
+.page-item-custom {transition: all 0.3s ease;border-radius: 8px ;margin: 0 2px;}
+.page-item-custom .page-link {background-color: #f8f9fa;border: none;color: #343a40;font-weight: 500;padding: 10px 15px;transition: all 0.2s ease;}
+.page-item-custom:hover .page-link {background-color: var(--primary-color);color: #fff;transform: scale(1.1);}  
+.page-item-custom.active .page-link {background-color: var(--primary-color);color: #fff;border: none;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);}
+.page-nav .page-link {background-color: #f8f9fa;border: none;color: var(--primary-color);font-size: 1.2rem;padding: 10px 15px;border-radius: 8px ;display: flex;align-items: center;transition: all 0.2s ease;line-height: normal;}
+.page-nav:hover .page-link {background-color: var(--primary-color);color: #fff;transform: scale(1.1);}
+.page-nav.disabled .page-link {background-color: #e9ecef;color: #6c757d;cursor: not-allowed;transform: none;}
+.page-item.disabled .page-link {background-color: #e9ecef;color: #6c757d;}
+/* pagination end */
+
+
+@media (max-width: 576px) {
+/* search */
+.search-input {font-size: 0.9rem;padding: 10px;}
+.search-button {padding: 8px 15px;font-size: 0.9rem;}
+/* search input*/
+
+/* pagination */
+.page-item-custom .page-link {padding: 8px 12px;font-size: 0.9rem;}
+.page-nav .page-link {padding: 8px 12px;font-size: 1rem;}
+/* pagination */
+
+}
