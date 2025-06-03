@@ -19,10 +19,6 @@ function Home() {
   const totalPages = data?.total_pages || 1;
 
   useEffect(() => {
-    // if(debouncedSearchQuery){
-    //   dispatch(setCurrentPage(1))
-    // }
-    
     dispatch(apiCall({
       method: 'GET',
       url: debouncedSearchQuery
@@ -31,11 +27,6 @@ function Home() {
     }));
   }, [dispatch, currentPage, debouncedSearchQuery]);
 
-  const handlePageChange = (page) => {
-    if (page >= 1 && page <= totalPages && page !== currentPage) {
-      dispatch(setCurrentPage(page));
-    }
-  };
 
   return (
     <Container className="py-4">
